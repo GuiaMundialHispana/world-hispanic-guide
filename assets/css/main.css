@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply bg-primary text-white h-8 flex items-center justify-center text-sm rounded-sm;
+}
