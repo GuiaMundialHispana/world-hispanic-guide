@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <h1 class="bg-red-500">testing <span>Soy un span</span></h1>
-    <AtomsIcon name="house-solid" />
-  </div>
+  
+  <p>dwd</p>
 </template>
 
 <style lang="postcss">

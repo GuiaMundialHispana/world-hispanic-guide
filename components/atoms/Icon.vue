@@ -20,3 +20,7 @@ export default {
   }
 }
 </script>
+
+<style>
+.nuxt-icon svg { @apply mb-0; }
+</style>
