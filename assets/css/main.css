@@ -10,3 +10,11 @@ body {
 .btn {
   @apply bg-primary text-white h-8 flex items-center justify-center text-sm rounded-sm;
 }
+
+.btn-primary-border {
+  @apply border border-primary text-primary flex items-center justify-center text-sm px-4 rounded-sm;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white flex items-center justify-center text-sm px-4 rounded-sm;
+}
