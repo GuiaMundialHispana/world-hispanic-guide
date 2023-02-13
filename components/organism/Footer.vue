@@ -1,6 +1,6 @@
 <template>
   <footer class="w-full bg-primary py-16">
-    <div class="xl:px-24 lg:px-16 px-4 grid md:grid-cols-12 grid-cols-1 xl:gap-x-16 md:gap-x-10 gap-y-6 items-center">
+    <div class="xl:px-24 lg:px-16 px-4 grid md:grid-cols-12 grid-cols-1 xl:gap-x-16 md:gap-x-10 gap-y-6 items-center 2xl:max-w-screen-2xl 2xl:mx-auto">
       <figure class="xl:col-span-3 col-span-12">
         <NuxtLink to="/">
           <img src="img/logo-white.png" class="w-56" alt="Guia Mundial Hispana" />
