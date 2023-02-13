@@ -1,5 +1,5 @@
 <template>
-  <section class="md:py-24 py-8 md:px-16 px-4 grid xl:grid-cols-2 gap-x-20">
+  <section class="md:py-24 py-8 md:px-16 px-4 grid xl:grid-cols-2 gap-x-20 max-w-screen-2xl mx-auto">
     <figure class="flex-none mb-8">
       <img src="img/home/join.png" alt="Join us" class="lg:max-w-[822px] w-full xl:m-0 mx-auto" />
     </figure>
