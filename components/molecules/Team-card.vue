@@ -17,5 +17,5 @@ p { @apply text-sm text-black font-normal text-justify; }
 
 .team-card {
   @apply p-4 hover:bg-[#FFF0F0] rounded-2xl;
-
+}
 </style>
