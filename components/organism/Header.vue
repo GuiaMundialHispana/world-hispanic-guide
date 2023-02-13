@@ -31,4 +31,8 @@
 .form-control {
   @apply border border-[#434343] text-sm h-8 px-4 rounded-sm placeholder:text-[#434343] placeholder:font-normal font-bold;
 }
+
+.router-link-active {
+  @apply border-b border-primary !important;
+}
 </style>
