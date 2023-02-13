@@ -1,5 +1,5 @@
 <template>
-  <div class="2xl:max-w-screen-2xl mx-auto px-4 lg:px-16 text-center lg:text-left">
+  <div class="2xl:max-w-screen-2xl mx-auto px-8 lg:px-16 text-center lg:text-left">
     <h2 class="text-[28px] font-medium my-4 lg:my-10">¿Quiénes Somos?</h2>
     <div class="grid xl:grid-cols-2 gap-6 lg:gap-16 bg-[#f2f1f1] bg-opacity-30 rounded-3xl px-4 lg:px-16 py-4 lg:py-[71px] items-center">
       <div class="text-justify">
