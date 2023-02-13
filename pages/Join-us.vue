@@ -78,43 +78,48 @@
       <!-- Personal references -->
       <h2 class="text-xl font-medium text-black mb-7">Referencias Personales:</h2>
       <p class="text-sm font-normal text-opacity-[0.85]"><span class="text-primary">*</span> Referencias personales</p>
-      <table class="w-full mb-6">
-        <tr class="border-b border-black border-opacity-[0.06]">
-          <th class="text-left w-1/3 p-4 border-r border-black border-opacity-[0.06]">
-            <span class="text-primary">*</span> Referencias personales
-          </th>
-          <th class="text-left w-1/3 p-4 border-r border-black border-opacity-[0.06]">
-            <span class="text-primary">*</span> Nombre completo
-          </th>
-          <th class="text-left w-1/3 p-4">
-            <span class="text-primary">*</span> Teléfono
-          </th>
-        </tr>
-        <tr class="border-b border-black border-opacity-[0.06]">
-          <td class="px-4 py-3">
-            Referencia 1
-          </td>
-          <td class="px-4 py-3">
-            <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 w-full h-8" value="Pedro Perez">
-          </td>
-          <td class="px-4 py-3">
-            <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 w-full h-8" value="809-345-2345" />
-          </td>
-        </tr>
-        <tr class="border-b border-black border-opacity-[0.06]">
-          <td class="px-4 py-3">
-            Referencia 1
-          </td>
-          <td class="px-4 py-3">
-            <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 w-full h-8" value="Pedro Perez">
-          </td>
-          <td class="px-4 py-3">
-            <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 w-full h-8" value="809-345-2345" />
-          </td>
-        </tr>
-      </table>
+      <div class="overflow-x-scroll md:overflow-hidden mt-2 w-full">
+        <table class="w-full mb-6 border-collapse m-0 p-0">
+          <tr class="border-b border-black border-opacity-[0.06] bg-[#FAFAFA]">
+            <th class="text-left w-1/3 whitespace-nowrap p-4 border-r border-black border-opacity-[0.06]">
+              <span class="text-primary">*</span> Referencias personales
+            </th>
+            <th class="text-left w-1/3 whitespace-nowrap p-4 border-r border-black border-opacity-[0.06]">
+              <span class="text-primary">*</span> Nombre completo
+            </th>
+            <th class="text-left w-1/3 whitespace-nowrap p-4">
+              <span class="text-primary">*</span> Teléfono
+            </th>
+          </tr>
+          <tr class="border-b border-black border-opacity-[0.06]">
+            <td class="px-4 py-3">
+              Referencia 1
+            </td>
+            <td class="px-4 py-3">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="Pedro Perez">
+            </td>
+            <td class="px-4 py-3">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="809-345-2345" />
+            </td>
+          </tr>
+          <tr class="border-b border-black border-opacity-[0.06]">
+            <td class="px-4 py-3">
+              Referencia 1
+            </td>
+            <td class="px-4 py-3">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="Pedro Perez">
+            </td>
+            <td class="px-4 py-3">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="809-345-2345" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black">
+        + Añadir
+      </button>
       <!--  -->
-      <div class="flex items-center text-sm text-opacity-[0.85] mb-2">
+      <div class="flex items-center text-sm text-opacity-[0.85] mb-2 mt-14">
         <input type="radio" name="Confirm" id="" class="mr-2 w-4 text-primary">
         Confirmar
       </div>
