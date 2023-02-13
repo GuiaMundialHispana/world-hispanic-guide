@@ -1,7 +1,9 @@
 <template>
-  <header class="px-10 py-9 flex items-center justify-between">
+  <header class="px-10 h-[102px] py-9 flex items-center justify-between">
     <figure>
-      <img src="/img/logo-header.png" alt="Guia mundial hispana" class="w-32 object-contain">
+      <NuxtLink to="/">
+        <img src="/img/logo-header.png" alt="Guia mundial hispana" class="w-32 object-contain" />
+      </NuxtLink>
     </figure>
     <nav class="lg:flex hidden lg:items-center gap-x-4 lg:flex-row flex-col lg:static absolute bg-white lg:border-none border border-black lg:w-auto w-96 h-full top-0 right-0 lg:p-0 p-4">
       <button class="w-8 h-8 btn flex-none mb-6 ml-auto mt-4 lg:hidden">
@@ -21,7 +23,7 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 .link-to {
   @apply text-[#434343] text-sm lg:px-4 py-1 lg:m-0 mb-4;
 }
