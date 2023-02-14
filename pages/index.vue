@@ -1,5 +1,5 @@
 <template>
   <PopulationHomeHero></PopulationHomeHero>
   <PopulationHomeCompanies></PopulationHomeCompanies>
-  <PopulationHomeJoin></PopulationHomeJoin>
+  <PopulationHomeSectionAffiliate></PopulationHomeSectionAffiliate>
 </template>

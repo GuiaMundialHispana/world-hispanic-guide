@@ -23,3 +23,9 @@ section {
   @apply bg-cover xl:h-[756px] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#F5F5F5] before:bg-opacity-[0.96] md:py-16 py-8;
 }
 </style>
+
+<script>
+export default {
+  name: 'HomeHero'
+}
+</script>

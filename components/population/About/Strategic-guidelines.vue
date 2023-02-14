@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  name: 'AboutStrategic',
   data() {
     return {
       tabs: ['Misión', 'Visión', 'Valores'],

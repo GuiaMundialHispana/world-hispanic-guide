@@ -38,6 +38,12 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: 'AboutCompanies'
+}
+</script>
+
 <style lang="postcss" scoped>
 .company-card{
   @apply 2xl:w-60 flex xl:gap-10 gap-4 flex-col text-center;

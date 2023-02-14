@@ -14,6 +14,7 @@
 import { teams } from '~/assets/helpers/Team.js';
 
 export default {
+  name: 'AboutTeam',
   data() {
     return {
       teams

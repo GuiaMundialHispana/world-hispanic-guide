@@ -17,8 +17,14 @@
       <button class="rounded-sm w-20 h-10 bg-[#1F2841] text-white text-base ">Enviar</button>
     </div>
   </div>
-  
-</template> 
+</template>
+
+<script>
+export default {
+  name: 'ContactForm'
+}
+</script>
+
 <style lang="postcss" scoped>
   label {
     @apply font-normal text-sm mr-2 text-opacity-[0.85];

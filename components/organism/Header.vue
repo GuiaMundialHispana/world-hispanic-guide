@@ -23,6 +23,12 @@
   </header>
 </template>
 
+<script>
+export default {
+  name: 'Header'
+}
+</script>
+
 <style lang="postcss" scoped>
 .link-to {
   @apply text-[#434343] text-sm lg:px-4 py-1 lg:m-0 mb-4;

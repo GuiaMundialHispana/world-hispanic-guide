@@ -11,3 +11,9 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'HomeJoin'
+}
+</script>

@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name:'teamCard',
   props: {
     img: String,
     name: String,
