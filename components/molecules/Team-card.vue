@@ -1,7 +1,7 @@
 <template>
   <div class="team-card">
     <figure class="max-w-[290px] w-full h-full mb-4 overflow-hidden">
-      <img :src="`img/team/${img}`" :alt="name">
+      <img :src="`/img/team/${img}`" :alt="name">
     </figure>
     <h4>{{ name }}</h4>
     <h6>{{ position }}</h6>

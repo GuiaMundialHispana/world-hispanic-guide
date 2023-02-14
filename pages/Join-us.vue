@@ -2,7 +2,7 @@
   <MoleculesBreadcrumbs pageName="Únete al equipo" pageLink="join-us" />
   <!--  -->
   <figure>
-    <img src="img/join/join-team.png" alt="Join us" class="max-w-[700px] w-full mx-auto">
+    <img src="/img/join/join-team.png" alt="Join us" class="max-w-[700px] w-full mx-auto">
   </figure>
   <!--  -->
   <Form class="mt-8 mb-20">

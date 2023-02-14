@@ -1,7 +1,7 @@
 <template>
   <section class="md:py-24 py-8 md:px-16 px-4 grid xl:grid-cols-2 gap-x-20 max-w-screen-2xl mx-auto">
     <figure class="flex-none mb-8">
-      <img src="img/home/join.png" alt="Join us" class="lg:max-w-[822px] w-full xl:m-0 mx-auto" />
+      <img src="/img/home/join.png" alt="Join us" class="lg:max-w-[822px] w-full xl:m-0 mx-auto" />
     </figure>
     <div>
       <h2 class="lg:text-6xl lg:leading-[68px] text-3xl font-bold text-primary mb-4 md:text-left text-center">Afíliate <br class="xl:block hidden" /> a nosotros</h2>

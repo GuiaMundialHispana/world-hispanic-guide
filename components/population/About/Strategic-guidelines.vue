@@ -2,9 +2,9 @@
   <section class="2xl:max-w-screen-2xl mx-auto p-8 lg:pb-16 lg:px-16">
     <div class="container p-0">
       <figure class="mb-16">
-        <img v-if="tab === 0" src="img/team/mision.png" alt="Misión" class="w-full object-contain max-w-[230px] mx-auto">
-        <img v-if="tab === 1" src="img/team/vision.png" alt="Visión" class="w-full object-contain max-w-sm mx-auto">
-        <img v-if="tab === 2" src="img/team/valores.png" alt="Valores" class="w-full object-contain max-w-md mx-auto">
+        <img v-if="tab === 0" src="/img/team/mision.png" alt="Misión" class="w-full object-contain max-w-[230px] mx-auto">
+        <img v-if="tab === 1" src="/img/team/vision.png" alt="Visión" class="w-full object-contain max-w-sm mx-auto">
+        <img v-if="tab === 2" src="/img/team/valores.png" alt="Valores" class="w-full object-contain max-w-md mx-auto">
       </figure>
       <nav class="flex justify-center gap-8 md:mb-6 mb-4">
         <button
