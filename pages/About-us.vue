@@ -2,6 +2,6 @@
   <MoleculesBreadcrumbs pageName="Sobre nosotros" pageLink="about-us" />
   <PopulationAboutDescription></PopulationAboutDescription>
   <PopulationAboutCompanies></PopulationAboutCompanies>
-  <!-- <PopulationAboutStrategicGuidelines></PopulationAboutStrategicGuidelines> -->
+  <PopulationAboutStrategicGuidelines></PopulationAboutStrategicGuidelines>
   <PopulationAboutTeam></PopulationAboutTeam>
 </template>
