@@ -18,7 +18,7 @@
         <h6 class="uppercase text-white font-medium text-sm xl:block hidden">NAVEGACIÓN</h6>
         <NuxtLink class="link-to" to="/about-us">Sobre nosotros</NuxtLink>
         <NuxtLink class="link-to" to="/contact">Contacto</NuxtLink>
-        <NuxtLink class="link-to" to="/join-us">Afiliate</NuxtLink>
+        <NuxtLink class="link-to" to="/affiliate">Afiliate</NuxtLink>
       </nav>
       <nav class="flex flex-none items-center xl:justify-start md:justify-end justify-center gap-2 xl:col-span-2 md:col-span-6 col-span-12">
         <a href="/" class="social-link">
