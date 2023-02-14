@@ -5,8 +5,8 @@
         <h1 class="lg:text-6xl lg:leading-[68px] text-3xl font-bold text-primary mb-2 xl:text-left text-center">Creando empleos <br /> <span class="text-secondary">sin limites</span></h1>
         <p class="mb-8 lg:text-2xl text-base text-secondary font-medium xl:text-left text-center">Más allá de cualquier frontera</p>
         <div class="flex items-center gap-x-4 xl:justify-start justify-center">
-          <NuxtLink class="btn-secondary h-9">Únete al equipo</NuxtLink>
-          <NuxtLink class="btn-primary-border h-9">Conoce el equipo</NuxtLink>
+          <NuxtLink to="/join-us" class="btn-secondary h-9 w-36">Afíliate</NuxtLink>
+          <NuxtLink to="/about-us" class="btn-primary-border h-9">Conoce el equipo</NuxtLink>
         </div>
       </div>
       <figure>
