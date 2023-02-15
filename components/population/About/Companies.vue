@@ -1,5 +1,5 @@
 <template>
-  <section class="2xl:max-w-screen-2xl mx-auto p-8 lg:px-16 text-center lg:text-left">
+  <section class="2xl:max-w-screen-2xl mx-auto px-4 md:px-8 p-8 lg:px-16 text-center lg:text-left">
     <h2 class="text-[28px] font-medium my-4 lg:my-10">Nuestras empresas</h2>
     <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-16 gap-6">
       <div class="company-card">

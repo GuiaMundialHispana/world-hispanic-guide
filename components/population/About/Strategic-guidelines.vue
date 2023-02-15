@@ -1,5 +1,5 @@
 <template>
-  <section class="2xl:max-w-screen-2xl mx-auto p-8 lg:pb-16 lg:px-16">
+  <section class="2xl:max-w-screen-2xl mx-auto px-4 md:px-8 p-8 lg:pb-16 lg:px-16">
     <div class="container p-0">
       <figure class="mb-16">
         <img v-if="tab === 0" src="/img/team/mision.png" alt="Misión" class="w-full object-contain max-w-[230px] mx-auto">

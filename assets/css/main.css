@@ -18,3 +18,8 @@ body {
 .btn-secondary {
   @apply bg-secondary text-white flex items-center justify-center text-sm px-4 rounded-sm;
 }
+
+body.modal-open {
+  @apply relative w-screen h-screen overflow-hidden;
+  @apply after:fixed after:z-40 z-50 after:inset-0 after:bg-black after:bg-opacity-40;
+}

@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    'nuxt-icons'
+    'nuxt-icons',
+    '@nuxtjs/device',
   ],
   postcss: {
     plugins: {
