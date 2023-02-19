@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     'nuxt-icons',
     '@nuxtjs/device',
   ],
+  dir: {
+    middleware: 'maintenance'
+  },
   postcss: {
     plugins: {
       'tailwindcss/nesting': 'postcss-nesting',
