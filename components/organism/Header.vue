@@ -8,7 +8,7 @@
     <nav :class="{'hidden':!showMenu}" class="lg:block fixed lg:static bg-white lg:w-auto w-full h-full top-0 right-0 lg:p-0 p-4 z-50">
       <div class="flex lg:items-center gap-x-4 lg:flex-row flex-col w-full h-full">
         <button @click="showMenu = false" class="w-8 h-8 btn flex-none mb-1 ml-auto mt-4 lg:hidden">
-          <AtomsIcon class="menu" :size=16></AtomsIcon>
+          <AtomsIcon name="menu" :size=16></AtomsIcon>
         </button>
         <NuxtLink class="link-to" to="/">Inicio</NuxtLink>
         <NuxtLink class="link-to" to="/about-us">Sobre nosotros</NuxtLink>
