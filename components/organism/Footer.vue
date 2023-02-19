@@ -19,6 +19,8 @@
         <NuxtLink class="link-to" to="/about-us">Sobre nosotros</NuxtLink>
         <NuxtLink class="link-to" to="/contact">Contacto</NuxtLink>
         <NuxtLink class="link-to" to="/affiliate">Afiliate</NuxtLink>
+        <NuxtLink class="link-to" to="/legal-warning">Aviso legal</NuxtLink>
+        <NuxtLink class="link-to" to="/privacy-policy">Politica de privacidad</NuxtLink>
       </nav>
       <nav class="flex flex-none items-center xl:justify-start md:justify-end justify-center gap-2 xl:col-span-2 md:col-span-6 col-span-12">
         <a href="/" class="social-link">

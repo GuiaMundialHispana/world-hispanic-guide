@@ -1,0 +1,15 @@
+<template>
+  <MoleculesBreadcrumbs pageName="Politica de privacidad" pageLink="privacy-policy" />
+  <section class="max-w-screen-2xl mx-auto md:px-16 px-4 pt-10 pb-24">
+    <h2 class="text-[28px] font-medium">Politica de privacidad</h2>
+    <hr class="mt-2 border-#F5F5F5 mb-14">
+    <p class="text-sm text-black">Cuando precisemos obtener información por su parte, siempre le solicitaremos que nos la proporcione voluntariamente de forma expresa. Los datos recabados a través de los formularios de recogida de datos del sitio web u otras vías serán incorporados a un fichero automatizado de datos de carácter personal del cual es responsable GUIA MUNDIAL HISPANA. Trataremos los datos de forma confidencial y exclusivamente con la finalidad de ofrecer los servicios solicitados, con todas las garantías legales y de seguridad que imponen la(s) Ley(es) de Republica Dominicana de
+    Protección de Datos de Carácter Personal y la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico.
+    <br />
+    <br />
+    GUIA MUNDIAL HISPANA se compromete a no ceder, vender, ni compartir los datos con terceros sin su aprobación expresa. Asimismo, GUIA MUNDIAL HISPANA cancelará o rectificará los datos cuando resulten inexactos, incompletos o hayan dejado de ser necesarios o pertinentes para su finalidad. El usuario podrá revocar el consentimiento prestado y ejercer los derechos de acceso, rectificación, cancelación y oposición dirigiéndose a tal efecto a la dirección de GUIA MUNDIAL HISPANA, identificándose debidamente e indicando de forma visible el concreto derecho que se ejerce. GUIA MUNDIAL HISPANA Adopta los niveles de seguridad correspondientes requeridos por las Leyes y demás normativas aplicables. No obstante, GUIA MUNDIAL HISPANA no asume ninguna responsabilidad por los daños y perjuicios derivados de alteraciones que terceros pueden causar en los sistemas informáticos, documentos electrónicos o ficheros del usuario.
+    <br />
+    <br />
+    GUIA MUNDIAL HISPANA podrá utilizar cookies durante la prestación de servicios del sitio web. Las cookies son ficheros físicos de información personal alojados en el propio terminal de usuario. El usuario tiene la posibilidad de configurar su programa navegador de manera que se impida la creación de archivos cookie o se advierta de la misma. Si opta a abandonar nuestro sitio web a través de enlaces a sitios web no pertenecientes a nuestra entidad, GUIA MUNDIAL HISPANA no se hará responsable de las políticas de privacidad de dichos sitios web ni de las cookies que éstopuedan almacenar en el computador del usuario. Nuestra política con respecto al correo electrónico se centra en remitir únicamente comunicaciones que usted haya solicitado recibir. Si prefiere no recibir estos mensajes por correo electrónico le ofreceremos a través de los mismos la posibilidad de ejercer su derecho de cancelación y renuncia a la recepción de estos mensajes, en conformidad con lo dispuesto en la Ley de Servicios para la Sociedad de la Información y de Comercio Electrónico. Comité Ejecutivo Guía Mundial Hispana</p>
+  </section>
+</template>
