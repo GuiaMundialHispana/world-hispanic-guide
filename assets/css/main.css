@@ -8,7 +8,7 @@ body {
 }
 
 .btn {
-  @apply bg-primary text-white h-8 flex items-center justify-center text-sm rounded-sm;
+  @apply bg-primary text-white flex items-center justify-center text-sm rounded-sm;
 }
 
 .btn-primary-border {
