@@ -14,7 +14,7 @@
           Guia Mundial Hispana es una web comercial que agrupa una variedad de servicios, dentro de un mismo espacio.
         </p>
       </div>
-      <nav class="flex xl:flex-col flex-row gap-4 md:justify-start justify-center xl:items-start items-center flex-none xl:col-span-2 md:col-span-6 col-span-12">
+      <nav class="flex lg:flex-col md:flex-row flex-col gap-4 md:justify-start justify-center xl:items-start items-center flex-none xl:col-span-2 md:col-span-6 col-span-12">
         <h6 class="uppercase text-white font-medium text-sm xl:block hidden">NAVEGACIÓN</h6>
         <NuxtLink class="link-to" to="/about-us">Sobre nosotros</NuxtLink>
         <NuxtLink class="link-to" to="/contact">Contacto</NuxtLink>
