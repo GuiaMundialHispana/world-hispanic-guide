@@ -1,16 +1,76 @@
 export const teams = [
   {
-    img: 'rafael-jaquez.jpg',
-    name: 'Rafael Jaquez',
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
     position: 'CEO Guía Mundial Hispana',
-    description: 'Empresario Dominicano y Presidente Fundador de Guía Mundial Hispana. Amplio rango de responsabilidades en el diseño, planificación y ejecución de las estrategias de la empresa.'
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
   },
   {
-    img: 'ramon-rodriguez.jpg',
-    name: 'Ramon Rodriguez',
-    position: 'Vicepresidente ejecutivo y Cofundador',
-    description: 'Mi meta es lograr una completa integración de todos los procesos de la empresa apoyándome en las nuevas tecnologías con el objetivo de mejorar el rendimiento interno.'
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
   },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  {
+    img: 'team-placeholder.jpg',
+    name: 'Nombre y apellido',
+    position: 'CEO Guía Mundial Hispana',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type'
+  },
+  // {
+  //   img: 'rafael-jaquez.jpg',
+  //   name: 'Rafael Jaquez',
+  //   position: 'CEO Guía Mundial Hispana',
+  //   description: 'Empresario Dominicano y Presidente Fundador de Guía Mundial Hispana. Amplio rango de responsabilidades en el diseño, planificación y ejecución de las estrategias de la empresa.'
+  // },
+  // {
+  //   img: 'ramon-rodriguez.jpg',
+  //   name: 'Ramon Rodriguez',
+  //   position: 'Vicepresidente ejecutivo y Cofundador',
+  //   description: 'Mi meta es lograr una completa integración de todos los procesos de la empresa apoyándome en las nuevas tecnologías con el objetivo de mejorar el rendimiento interno.'
+  // },
   // {
   //   img: 'shadda-jaquez.jpg',
   //   name: 'Shaddai Jaquez',
