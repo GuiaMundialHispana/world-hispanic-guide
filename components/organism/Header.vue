@@ -22,7 +22,7 @@
       </div>
     </nav>
     <button @click="showMenu = !showMenu" class="w-8 h-8 btn flex-none lg:hidden">
-      <AtomsIcon class="menu" :size=16></AtomsIcon>
+      <AtomsIcon name="menu" :size=16></AtomsIcon>
     </button>
   </header>
 </template>
