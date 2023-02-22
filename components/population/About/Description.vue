@@ -7,9 +7,10 @@
       <p> Cuenta un nutrido grupo de profesionales en distintas áreas afines a los negocios de asesorías, en bienes raíces, financieras, informáticas, legales, mercadeo y publicidad, medios de comunicación y en redes sociales. La guía brinda la oportunidad a todas las personas de que, aunque esté trabajando pueda afiliarse y aumentar sus ingresos con hasta un 65% en comisión por venta de publicidad en sus comunidades o localidades.</p><br>
       <p> Otra ventaja de la “Guía mundial hispana” es que no toma en cuenta edad, religión, afiliación política, inclinación sexual ni discapacidad física de las personas para afiliarse y recibir los beneficios correspondientes.</p>
     </div>
-    <figure class="row-start-1 lg:col-start-2 ">
+    <div class="rounded-lg bg-gray-400 row-start-1 lg:col-start-2 h-full"></div>
+    <!-- <figure class="row-start-1 lg:col-start-2">
       <img class="rounded-2xl mx-auto" src="/img/about-us/us.jpg" alt="Nosotros">
-    </figure>
+    </figure> -->
     </div>
   </div>
 </template>
