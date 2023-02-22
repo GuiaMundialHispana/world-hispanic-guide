@@ -45,8 +45,13 @@ export default {
   name: 'Footer',
   computed: {
     changeBackground() {
-      return {
-        'bg-[#111544]':  this.$route.fullPath === '/about-us'
+      if(
+        this.$route.fullPath === '/about-us' ||
+        this.$route.fullPath === '/benefits' ||
+        this.$route.fullPath === '/legal-warning' ||
+        this.$route.fullPath === '/privacy-policy') 
+      {
+        return 'bg-[#111544]'
       }
     }
   }
