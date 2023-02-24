@@ -13,7 +13,7 @@
         <NuxtLink class="link-to" to="/">Inicio</NuxtLink>
         <NuxtLink class="link-to" to="/about-us">Sobre nosotros</NuxtLink>
         <NuxtLink class="link-to" to="/contact">Contacto</NuxtLink>
-        <NuxtLink class="link-to" to="/maintenance">Beneficios</NuxtLink>
+        <NuxtLink class="link-to" to="/benefits">Beneficios</NuxtLink>
         <!-- <div class="form-group relative lg:m-0 mb-4 lg:w-max w-full">
           <input type="text" class="form-control" placeholder="Buscar">
           <AtomsIcon name="search" :size=16 class="absolute right-0 w-8 h-8 flex items-center justify-center border-l border-[#434343] top-0" />

@@ -2,7 +2,7 @@
   <section class="px-4 md:px-6 lg:px-20 mx-auto">
     <div class="benefit-content mt-4 md:mt-8 lg:mt-32">
       <figure class="justify-end lg:pr-8">
-        <img class="lg:w-[567px]" src="/img/Benefits/user-benefits.png" alt="Beneficios como usuario">
+        <img class="lg:w-[567px]" src="/img/benefits/user-benefits.png" alt="Beneficios como usuario">
       </figure>
       <div class="benefit-info">
         <h2><span>Beneficios</span><br>como usuario</h2>
@@ -11,7 +11,7 @@
     </div>
     <div class="benefit-content reverse my-11 lg:my-32">
         <figure class="lg:pl-[140px]">
-        <img class="lg:w-[423px]" src="/img/Benefits/advertiser-benefits.png" alt="Beneficios como anunciante">
+        <img class="lg:w-[423px]" src="/img/benefits/advertiser-benefits.png" alt="Beneficios como anunciante">
       </figure>
       <div class="benefit-info lg:text-right">
         <h2><span>Beneficios</span><br> como anunciante</h2>
@@ -20,7 +20,7 @@
     </div>
     <div class="benefit-content mb-[88px]">
         <figure class="justify-end lg:pr-16">
-          <img class="lg:w-[507px]" src="/img/Benefits/affiliate-benefits.png" alt="Beneficios como afiliado independiente">
+          <img class="lg:w-[507px]" src="/img/benefits/affiliate-benefits.png" alt="Beneficios como afiliado independiente">
         </figure>
         <div class="benefit-info">
           <h2><span>Beneficios</span><br> como afiliado<br> independiente</h2>
