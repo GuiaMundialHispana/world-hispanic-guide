@@ -68,11 +68,7 @@
           <div class="form-group">
             <label for="country">País:</label>
             <input type="text" placeholder="País" id="country" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="hered">Ced. Hered:</label>
-            <input type="text" placeholder="Ced. Hered" id="hered" class="form-control" />
-          </div>
+          </div> 
         </div>
       </div>
       <!-- Personal references -->
@@ -96,10 +92,10 @@
               Referencia 1
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="Pedro Perez">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="809-345-2345" />
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
             </td>
           </tr>
           <tr class="border-b border-black border-opacity-[0.06]">
@@ -107,10 +103,10 @@
               Referencia 1
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="Pedro Perez">
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" value="809-345-2345" />
+              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
             </td>
           </tr>
         </table>
