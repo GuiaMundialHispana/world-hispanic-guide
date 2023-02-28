@@ -47,12 +47,12 @@ export const teams = [
     position: 'Gerente de Publicidad y cofundador',
     description: 'Trabajo en el departamento de divulgación técnica de la secretaria de estado de agricultura. Constituyó la primera empresa de letreros y vallas del sur.'
   },
-  // {
-  //   img: 'elizabeth-matos.jpg',
-  //   name: 'Elizabeth Matos',
-  //   position: 'Gerente de Mercadeo y Cofundadora',
-  //   description: 'Su responsabilidad es desarrollar estrategias de mercados competitivos y de avances tecnológicos para llegar de forma fácil.'
-  // },
+  {
+    img: 'elizabeth-matos.jpg',
+    name: 'Elizabeth Matos',
+    position: 'Gerente de Mercadeo y Cofundadora',
+    description: 'Su responsabilidad es desarrollar estrategias de mercados competitivos y de avances tecnológicos para llegar de forma fácil.'
+  },
   // {
   //   img: 'bethania-castro.jpg',
   //   name: 'Bethania Castro',
