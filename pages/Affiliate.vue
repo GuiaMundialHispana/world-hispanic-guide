@@ -5,29 +5,30 @@
     <img src="/img/affiliate/join-team.png" alt="Join us" class="max-w-[700px] w-full mx-auto">
   </figure>
   <!--  -->
-  <Form class="mt-8 mb-20">
+  <div class="mt-8 mb-20">
     <div class="max-w-[960px] px-8 mx-auto">
-      <!-- User information -->
+      <!-- User indivation -->
       <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
       <div class="grid lg:grid-cols-2 grid-cols-1 mb-6">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="user">Usuario:</label>
-            <input type="text" placeholder="usuario" id="user" class="form-control" />
+            <input type="text" v-model="userName" placeholder="usuario" id="user" class="form-control" />
           </div>
           <div class="form-group">
             <label for="email">Correo:</label>
-            <input type="text" placeholder="Correo" id="email" class="form-control" />
+            <input type="text" v-model="email" placeholder="Correo" id="email" class="form-control" />
           </div>
         </div>
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="password">Contraseña:</label>
-            <input type="password" placeholder="Contraseña" id="password" class="form-control" />
+            <input type="password" v-model="password" placeholder="Contraseña" id="password" class="form-control" />
           </div>
           <div class="form-group">
             <label for="repeatPassword">Repetir contraseña:</label>
-            <input type="password" placeholder="Repetir contraseña" id="repeatPassword" class="form-control" />
+            <input type="password" v-model="confirmPassword" placeholder="Repetir contraseña" id="repeatPassword" class="form-control" />
+            <p v-if="errorPasswordConfirm" class="text-red-500 font-bold text-xs">La contraseña no es igual</p>
           </div>
         </div>
       </div>
@@ -37,37 +38,37 @@
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
-            <input type="text" placeholder="Nombre" id="name" class="form-control" />
+            <input type="text" v-model="name" placeholder="Nombre" id="name" class="form-control" />
           </div>
           <div class="form-group">
             <label for="lastName">Apellido:</label>
-            <input type="text" placeholder="Apellido" id="lastName" class="form-control" />
+            <input type="text" v-model="lastName" placeholder="Apellido" id="lastName" class="form-control" />
           </div>
           <div class="form-group">
             <label for="address">Dirección:</label>
-            <input type="text" placeholder="Dirección" id="address" class="form-control" />
+            <input type="text" v-model="address" placeholder="Dirección" id="address" class="form-control" />
           </div>
           <div class="form-group">
             <label for="personalPhone">Teléfono personal:</label>
-            <input type="text" placeholder="Télefono" id="personalPhone" class="form-control" />
+            <input type="text" v-model="personalPhone" placeholder="Télefono" id="personalPhone" class="form-control" />
           </div>
         </div>
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="officePhone">Teléfono oficina:</label>
-            <input type="text" placeholder="Télefono" id="officePhone" class="form-control" />
+            <input type="text" v-model="officePhone" placeholder="Télefono" id="officePhone" class="form-control" />
           </div>
           <div class="form-group">
             <label for="date">Fecha de nacimiento:</label>
-            <input type="date" placeholder="Seleciona una fecha" id="date" class="form-control" />
+            <input type="date" v-model="birthdate" placeholder="Seleciona una fecha" id="date" class="form-control" />
           </div>
           <div class="form-group">
             <label for="userId">Cédula:</label>
-            <input type="text" placeholder="Cédula" id="userId" class="form-control" />
+            <input type="text" v-model="socialId" placeholder="Cédula" id="userId" class="form-control" />
           </div>
           <div class="form-group">
             <label for="country">País:</label>
-            <input type="text" placeholder="País" id="country" class="form-control" />
+            <input type="text" v-model="country" placeholder="País" id="country" class="form-control" />
           </div> 
         </div>
       </div>
@@ -87,43 +88,107 @@
               <span class="text-primary">*</span> Teléfono
             </th>
           </tr>
-          <tr class="border-b border-black border-opacity-[0.06]">
+          <tr v-for="(tr,index) in referenceLimit" :key="index">
             <td class="px-4 py-3">
-              Referencia 1
+              Referencia {{ index + 1 }}
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
+              <input type="text" v-model="tr.name" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
             </td>
             <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
+              <input type="number" v-model="tr.phone" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
             </td>
-          </tr>
-          <tr class="border-b border-black border-opacity-[0.06]">
-            <td class="px-4 py-3">
-              Referencia 1
-            </td>
-            <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
-            </td>
-            <td class="px-4 py-3">
-              <input type="text" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
-            </td>
+            <td v-if="index > 0" @click="referenceLimit.splice(index ,1)">eliminar</td>
           </tr>
         </table>
       </div>
-      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black">
+      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black" @click="creta()">
         + Añadir
       </button>
       <!--  -->
       <div class="flex items-center text-sm text-opacity-[0.85] mb-2 mt-14">
-        <input type="radio" name="Confirm" id="" class="mr-2 w-4 text-primary">
+        <input type="radio" name="Confirm" id="" class="mr-2 w-4 text-primary" @click="confirm != confirm">
         Confirmar
       </div>
       <p class="text-sm text-black text-opacity-[0.45] mb-6">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
-      <button class="btn px-4 mx-auto">Aceptar y enviar solicitud</button>
+      <button type="submit" class="btn h-8 px-4 mx-auto" @click="createAffiliate()">Aceptar y enviar solicitud</button>
     </div>
-  </Form>
+    <!-- Confirmation -->
+    <div v-if="successConfirmation">
+      <p>Mensaje de confirmacion</p>
+    </div>
+    <div v-else>
+      mensaje de error
+    </div>
+  </div>
 </template>
+
+<script setup lang="ts">
+const config = useRuntimeConfig();
+const userName = ref('');
+const email = ref('');
+const password = ref('');
+const confirmPassword = ref('');
+const name = ref('');
+const lastName = ref('');
+const address = ref('');
+const personalPhone = ref('');
+const officePhone = ref('');
+const birthdate = ref('');
+const socialId = ref('');
+const country = ref('');
+const confirm = ref(false);
+const loading = ref(false);
+const errorPasswordConfirm = ref(false);
+const successConfirmation = ref(false);
+const referenceLimit = ref([{name:'', phone: ''}])
+
+function creta() {
+  referenceLimit.value.push({name: '', phone: ''});
+  console.log(referenceLimit.value)
+}
+
+watch(confirmPassword, (newPass) => {
+  if(newPass !== password.value) {
+    errorPasswordConfirm.value = true;
+  } else {
+    errorPasswordConfirm.value = false;
+  }
+})
+
+async function createAffiliate() {
+  loading.value = true;
+  const form = new FormData();
+  form.append('name', name.value);
+  form.append('lastname', lastName.value);
+  form.append('email', email.value);
+  form.append('password', password.value);
+  form.append('password_confirmation', confirmPassword.value);
+  form.append('office_number', officePhone.value);
+  form.append('birthdate', birthdate.value);
+  form.append('address', address.value);
+  form.append('social_id', socialId.value);
+  form.append('personal_phone', personalPhone.value);
+  form.append('country', country.value);
+
+  referenceLimit.value.forEach(function (reference, index) {
+    form.append(`personal_references[${index}][name]`, reference.name);
+    form.append(`personal_references[${index}][phone]`, reference.phone);
+  });
+
+  await useFetch('auth/register',{
+    method: 'POST',
+    baseURL: config.public.API,
+    body: form,
+    onResponse({response}) {
+      loading.value = false;
+      console.log(response._data)
+      if(response.code === 200) { successConfirmation.value = true; }
+    }
+  });
+} 
+
+</script>
 
 <style lang="postcss" scoped>
 label {
