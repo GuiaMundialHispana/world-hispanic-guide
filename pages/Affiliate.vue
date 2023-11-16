@@ -9,11 +9,11 @@
     <div class="max-w-[960px] px-8 mx-auto">
       <!-- User indivation -->
       <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
-      <div class="grid lg:grid-cols-2 grid-cols-1 mb-6">
+      <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6 w-full">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="user">Usuario:</label>
-            <input type="text" v-model="userName" placeholder="usuario" id="user" class="form-control" />
+            <input type="text" v-model="userName" placeholder="Usuario" id="user" class="form-control" />
           </div>
           <div class="form-group">
             <label for="email">Correo:</label>
@@ -34,7 +34,7 @@
       </div>
       <!-- Personal information -->
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
-      <div class="grid lg:grid-cols-2 grid-cols-1 mb-6">
+      <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
@@ -102,7 +102,7 @@
           </tr>
         </table>
       </div>
-      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black" @click="creta()">
+      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black" @click="createRow()">
         + Añadir
       </button>
       <!--  -->
@@ -114,11 +114,19 @@
       <button type="submit" class="btn h-8 px-4 mx-auto" @click="createAffiliate()">Aceptar y enviar solicitud</button>
     </div>
     <!-- Confirmation -->
-    <div v-if="successConfirmation">
-      <p>Mensaje de confirmacion</p>
-    </div>
-    <div v-else>
-      mensaje de error
+    <div class="px-4 sm:px-8">
+      <div v-if="successConfirmation" class="bg-[#3fcc3c] confirmation-msg ">
+        <figure>
+          <img src="/img/check.png" alt="Confirm success">
+        </figure>
+        <p>La información fue enviada con éxito</p>
+      </div>
+      <div v-else class="bg-primary confirmation-msg ">
+        <figure>
+          <img src="/img/warning.png" alt="Error" class="w-full">
+        </figure>
+        <p class="text-white text-xl font-semibold text-center">Ocurrió un Error, por favor verifica la información suministrada</p>
+      </div>
     </div>
   </div>
 </template>
@@ -143,7 +151,7 @@ const errorPasswordConfirm = ref(false);
 const successConfirmation = ref(false);
 const referenceLimit = ref([{name:'', phone: ''}])
 
-function creta() {
+function createRow() {
   referenceLimit.value.push({name: '', phone: ''});
   console.log(referenceLimit.value)
 }
@@ -194,10 +202,17 @@ async function createAffiliate() {
 label {
   @apply font-normal text-sm mr-2 text-opacity-[0.85];
 }
-
-.form-group { @apply mb-6 flex items-center w-full lg:w-auto; }
-
+.form-group { @apply mb-6 flex w-full flex-col gap-2; }
 .form-control {
-  @apply flex-grow md:w-[216px] h-8 border border-[#D9D9D9] text-sm rounded-sm px-3 placeholder:text-opacity-25 placeholder:font-normal;
+  @apply flex-grow h-8 border w-full border-[#D9D9D9] text-sm rounded-sm px-3 placeholder:text-opacity-25 placeholder:font-normal;
+}
+.confirmation-msg{
+  @apply flex items-center justify-center flex-col mt-10 gap-4 sm:p-5 p-3 w-fit mx-auto rounded-xl;
+  & figure{
+    @apply flex items-center justify-center rounded-full w-14 h-14 bg-white p-3;
+  }
+  & p{
+    @apply text-white text-base sm:text-xl font-semibold text-center;
+  }
 }
 </style>
