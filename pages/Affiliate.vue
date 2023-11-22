@@ -6,7 +6,7 @@
   </figure>
   <!--  -->
   <div class="mt-8 mb-20">
-    <div class="max-w-[960px] px-8 mx-auto">
+    <div v-if="!successConfirmation" class="max-w-[960px] px-8 mx-auto">
       <!-- User indivation -->
       <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
       <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6 w-full">
@@ -106,27 +106,31 @@
         + Añadir
       </button>
       <!--  -->
-      <div class="flex items-center text-sm text-opacity-[0.85] mb-2 mt-14">
-        <input type="radio" name="Confirm" id="" class="mr-2 w-4 text-primary" @click="confirm != confirm">
+      <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-14">
+        <input type="checkbox" name="Confirm" id="confirm" class="mr-2 w-4 h-4 text-primary" @click="confirm != confirm">
         Confirmar
-      </div>
+      </label>
       <p class="text-sm text-black text-opacity-[0.45] mb-6">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
-      <button type="submit" class="btn h-8 px-4 mx-auto" @click="createAffiliate()">Aceptar y enviar solicitud</button>
     </div>
     <!-- Confirmation -->
     <div class="px-4 sm:px-8">
-      <div v-if="successConfirmation" class="bg-[#3fcc3c] confirmation-msg ">
+      <div v-if="successConfirmation" class="bg-[#3fcc3c] confirmation-msg">
         <figure>
           <img src="/img/check.png" alt="Confirm success">
         </figure>
         <p>La información fue enviada con éxito</p>
+        <button class="btn h-8 px-4 mx-auto mt-4" @click="successConfirmation = false">Hacer una nueva aplicacion</button>
       </div>
-      <div v-else class="bg-primary confirmation-msg ">
+      <div v-if="errorConfirmation" class="bg-primary confirmation-msg">
         <figure>
           <img src="/img/warning.png" alt="Error" class="w-full">
         </figure>
         <p class="text-white text-xl font-semibold text-center">Ocurrió un Error, por favor verifica la información suministrada</p>
+        <ul>
+          <li class="text-white text-xl font-semibold mb-2 list-disc" v-for="error in errorMessage" :key="error">{{  error[0] }}</li>
+        </ul>
       </div>
+      <button class="btn h-8 px-4 mx-auto mt-4" @click="createAffiliate()" :disabled="confirm">Aceptar y enviar solicitud</button>
     </div>
   </div>
 </template>
@@ -149,11 +153,12 @@ const confirm = ref(false);
 const loading = ref(false);
 const errorPasswordConfirm = ref(false);
 const successConfirmation = ref(false);
+const errorConfirmation = ref(false);
+let errorMessage = ref(null)
 const referenceLimit = ref([{name:'', phone: ''}])
 
 function createRow() {
   referenceLimit.value.push({name: '', phone: ''});
-  console.log(referenceLimit.value)
 }
 
 watch(confirmPassword, (newPass) => {
@@ -165,6 +170,9 @@ watch(confirmPassword, (newPass) => {
 })
 
 async function createAffiliate() {
+  errorConfirmation.value = false;
+  errorMessage.value = null;
+  successConfirmation.value = false;
   loading.value = true;
   const form = new FormData();
   form.append('name', name.value);
@@ -190,8 +198,14 @@ async function createAffiliate() {
     body: form,
     onResponse({response}) {
       loading.value = false;
-      console.log(response._data)
-      if(response.code === 200) { successConfirmation.value = true; }
+      if(response._data.code === 200) { successConfirmation.value = true; }
+    },
+    onResponseError({response}) {
+      loading.value = false;
+      if(response._data.code === 400) {
+        errorConfirmation.value = true;
+        errorMessage.value = response._data.message;
+      }
     }
   });
 } 
