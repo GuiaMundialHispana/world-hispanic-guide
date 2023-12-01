@@ -22,7 +22,7 @@
             <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-car.png" alt="Hispana Auto">
           </figure>
         </a>
-        <NuxtLink to="/">
+        <NuxtLink to="/https://hispana-admin-lbzmu.ondigitalocean.app/admin">
           <figure class="px-4">
             <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-afiliates.png" alt="Hispana Afiliados">
           </figure>
