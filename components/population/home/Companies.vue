@@ -9,20 +9,20 @@
       <div class="grid grid-cols-2 lg:grid-cols-4 lg:justify-between gap-8 lg:px-20 px-4 mx-auto">
         <a href="https://hispana-home-nuxt-eight.vercel.app/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-home.png" alt="Hispana Home">
+            <img class="md:w-50 lg:w-60 mx-auto" src="/img/home/hispana-home.svg" alt="Hispana Home">
           </figure>
         </a>
         <a href="https://hispana-negocios.vercel.app/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-bussiness.png" alt="Hispana Negocios">
+            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-bussiness.svg" alt="Hispana Negocios">
           </figure>
         </a>
         <a href="https://hispana-auto-nuxt.vercel.app/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-car.png" alt="Hispana Auto">
+            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-car.svg" alt="Hispana Auto">
           </figure>
         </a>
-        <NuxtLink to="/https://hispana-admin-lbzmu.ondigitalocean.app/admin">
+        <NuxtLink to="https://hispana-admin-tc9h7.ondigitalocean.app/admin">
           <figure class="px-4">
             <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-afiliates.png" alt="Hispana Afiliados">
           </figure>
