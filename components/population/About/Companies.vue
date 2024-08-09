@@ -5,7 +5,7 @@
       <div class="company-card">
         <a href="#">
           <figure>
-            <img src="/img/home/hispana-home.png" alt="Hispana Home">
+            <img src="/img/home/hispana-home.svg" alt="Hispana Home">
           </figure>
         </a>
         <p>El portal de propiedades más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su propiedad y poder llegar a más clientes potenciales en todo el mundo.</p>
@@ -13,7 +13,7 @@
       <div class="company-card">
         <a href="#">
           <figure>
-            <img src="/img/home/hispana-bussiness.png" alt="Hispana Negocios">
+            <img src="/img/home/hispana-bussiness.svg" alt="Hispana Negocios">
           </figure>
         </a>
         <p>El portal de Negocios más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su negocio y poder llegar a más clientes potenciales en todo el mundo.</p>
@@ -21,7 +21,7 @@
       <div class="company-card">
         <a href="#">
           <figure>
-            <img src="/img/home/hispana-car.png" alt="Hispana Auto">
+            <img src="/img/home/hispana-car.svg" alt="Hispana Auto">
           </figure>
         </a>
         <p>El portal de vehículos más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su vehículo y poder llegar a más clientes potenciales en todo el mundo.</p>
