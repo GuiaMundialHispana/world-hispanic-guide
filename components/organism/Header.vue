@@ -18,7 +18,7 @@
           <input type="text" class="form-control" placeholder="Buscar">
           <AtomsIcon name="search" :size=16 class="absolute right-0 w-8 h-8 flex items-center justify-center border-l border-[#434343] top-0" />
         </div> -->
-        <NuxtLink to="https://hispana-admin-lbzmu.ondigitalocean.app/admin" class="btn w-32 h-8">Inicia sesión</NuxtLink>
+        <NuxtLink to="https://hispana-admin-tc9h7.ondigitalocean.app/admin" class="btn w-32 h-8">Inicia sesión</NuxtLink>
       </div>
     </nav>
     <button @click="showMenu = !showMenu" class="w-8 h-8 btn flex-none lg:hidden">
