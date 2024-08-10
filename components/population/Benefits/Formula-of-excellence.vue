@@ -366,7 +366,6 @@
     </div>
     <!-- US TABLES-->
     <div v-show="ShowUS" class="flex flex-col gap-7">
-      <p>fef</p>
       <!-- Table 3+3-->
       <div>
         <button :class="{'rounded-b-lg': !tables.tableUS1}" @click="toggleTable('tableUS1')" class="formula-btn">Formula
