@@ -50,13 +50,13 @@
           </div>
           <div class="form-group">
             <label for="personalPhone">Teléfono personal:</label>
-            <input type="text" v-model="personalPhone" placeholder="Télefono" id="personalPhone" class="form-control" />
+            <VueTelInput id="personalPhone" v-model="personalPhone" mode="international" class="form-control w-full flex"></VueTelInput>
           </div>
         </div>
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="officePhone">Teléfono oficina:</label>
-            <input type="text" v-model="officePhone" placeholder="Télefono" id="officePhone" class="form-control" />
+            <VueTelInput id="officePhone" v-model="officePhone" mode="international" class="form-control w-full flex"></VueTelInput>
           </div>
           <div class="form-group">
             <label for="date">Fecha de nacimiento:</label>
@@ -100,7 +100,7 @@
               <input type="text" v-model="tr.name" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
             </td>
             <td class="px-4 py-3">
-              <input type="number" v-model="tr.phone" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="809-345-2345" />
+              <VueTelInput id="officePhone" v-model="tr.phone" mode="international" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60"></VueTelInput>
             </td>
             <td v-if="index > 0" @click="referenceLimit.splice(index ,1)">eliminar</td>
           </tr>
@@ -139,7 +139,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+import { VueTelInput } from 'vue-tel-input';
+import 'vue-tel-input/vue-tel-input.css';
+
 const config = useRuntimeConfig();
 const userName = ref('');
 const email = ref('');
@@ -175,6 +178,7 @@ watch(confirmPassword, (newPass) => {
 })
 
 async function createAffiliate() {
+  console.log(config.public);
   errorConfirmation.value = false;
   errorMessage.value = null;
   successConfirmation.value = false;
