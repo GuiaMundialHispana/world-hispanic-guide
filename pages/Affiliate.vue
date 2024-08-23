@@ -34,7 +34,7 @@
       </div>
       <!-- Personal information -->
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
-      <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6">
+      <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1 mb-6">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
@@ -69,8 +69,12 @@
           <div class="form-group">
             <label for="country">País:</label>
             <input type="text" v-model="country" placeholder="País" id="country" class="form-control" />
-          </div> 
+          </div>
         </div>
+        <div class="form-group">
+          <label for="city">Ciudad:</label>
+          <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
+        </div> 
       </div>
       <!-- Personal references -->
       <h2 class="text-xl font-medium text-black mb-7">Referencias Personales:</h2>
@@ -149,6 +153,7 @@ const officePhone = ref('');
 const birthdate = ref('');
 const socialId = ref('');
 const country = ref('');
+const city = ref('');
 const confirm = ref(false);
 const loading = ref(false);
 const errorPasswordConfirm = ref(false);
@@ -186,6 +191,7 @@ async function createAffiliate() {
   form.append('social_id', socialId.value);
   form.append('personal_phone', personalPhone.value);
   form.append('country', country.value);
+  form.append('city', city.value);
 
   referenceLimit.value.forEach(function (reference, index) {
     form.append(`personal_references[${index}][name]`, reference.name);
