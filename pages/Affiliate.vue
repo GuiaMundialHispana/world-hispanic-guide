@@ -189,12 +189,12 @@ watch(confirmPassword, (newPass) => {
 })
 
 if(useRoute().query.ref) {
-  const { data, pending } = useFetch('REF-l9vLW65AKb9yWx97', {
+  const { data, pending } = useFetch('inviter/rfxZfPRFgGPTvhtbw6DmGRZ9ewmntBym', {
     method: 'GET',
     baseURL: config.public.API,
     server: false,
     onResponse({response}) {
-      console.log(response);
+      console.log(response._data);
     },
   });
 }
@@ -220,7 +220,7 @@ async function createAffiliate() {
 
   const referedToken = useRoute().query.ref?.toString();
   if (referedToken) {
-    form.append('refered_token', referedToken);
+    form.append('token', referedToken);
   }
 
   // referenceLimit.value.forEach(function (reference, index) {
