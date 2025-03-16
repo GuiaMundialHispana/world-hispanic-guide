@@ -217,6 +217,7 @@ async function createAffiliate() {
   form.append('personal_phone', personalPhone.value);
   form.append('country', country.value);
   form.append('city', city.value);
+  form.append('suscription', affiliate.value);
 
   const referedToken = useRoute().query.ref?.toString();
   if (referedToken) {
