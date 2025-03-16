@@ -8,7 +8,7 @@
   <div class="mt-8 mb-20">
     <div v-if="!successConfirmation" class="max-w-[960px] px-8 mx-auto">
       <!-- User indivation -->
-      <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
+      <!-- <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
       <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6 w-full">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
@@ -31,7 +31,7 @@
             <p v-if="errorPasswordConfirm" class="text-red-500 font-bold text-xs">La contraseña no es igual</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Personal information -->
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
       <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1 mb-6">
@@ -74,10 +74,17 @@
         <div class="form-group">
           <label for="city">Ciudad:</label>
           <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
-        </div> 
+        </div>
+        <div class="form-group">
+          <label for="affiliate">Tipo de Afiliado:</label>
+          <select name="affiliate" id="affiliate" class="form-control">
+            <option value="active">Afiliacion Activa</option>
+            <option value="pasive">Afiliacion Pasiva</option>
+          </select>
+        </div>
       </div>
       <!-- Personal references -->
-      <h2 class="text-xl font-medium text-black mb-7">Referencias Personales:</h2>
+      <!-- <h2 class="text-xl font-medium text-black mb-7">Referencias Personales:</h2>
       <p class="text-sm font-normal text-opacity-[0.85]"><span class="text-primary">*</span> Referencias personales</p>
       <div class="overflow-x-scroll md:overflow-hidden mt-2 w-full">
         <table class="w-full mb-6 border-collapse m-0 p-0">
@@ -108,13 +115,13 @@
       </div>
       <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black" @click="createRow()">
         + Añadir
-      </button>
+      </button> -->
       <!--  -->
-      <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-14">
+      <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-8">
         <input type="checkbox" name="Confirm" id="confirm" class="mr-2 w-4 h-4 text-primary" @click="confirm != confirm">
         Confirmar
       </label>
-      <p class="text-sm text-black text-opacity-[0.45] mb-6">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
+      <p class="text-sm text-black text-opacity-[0.45] mb-6 mt-3">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
     </div>
     <!-- Confirmation -->
     <div class="px-4 sm:px-8">
@@ -157,6 +164,7 @@ const birthdate = ref('');
 const socialId = ref('');
 const country = ref('');
 const city = ref('');
+const affiliate = ref('');
 const confirm = ref(false);
 const loading = ref(false);
 const errorPasswordConfirm = ref(false);
@@ -178,7 +186,6 @@ watch(confirmPassword, (newPass) => {
 })
 
 async function createAffiliate() {
-  console.log(config.public);
   errorConfirmation.value = false;
   errorMessage.value = null;
   successConfirmation.value = false;
