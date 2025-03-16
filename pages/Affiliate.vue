@@ -33,8 +33,11 @@
         </div>
       </div> -->
       <!-- Personal information -->
+      <h1 v-if="useRoute().query.ref" class="text-black font-bold mb-7 text-2xl">
+        <span>Estas siendo invitado por:</span> <span class="text-primary">Juanito Pena</span>
+      </h1>
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
-      <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1 mb-6">
+      <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
@@ -117,7 +120,7 @@
         + Añadir
       </button> -->
       <!--  -->
-      <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-8">
+      <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-4">
         <input type="checkbox" name="Confirm" id="confirm" class="mr-2 w-4 h-4 text-primary" @click="confirm != confirm">
         Confirmar
       </label>
@@ -204,10 +207,15 @@ async function createAffiliate() {
   form.append('country', country.value);
   form.append('city', city.value);
 
-  referenceLimit.value.forEach(function (reference, index) {
-    form.append(`personal_references[${index}][name]`, reference.name);
-    form.append(`personal_references[${index}][phone]`, reference.phone);
-  });
+  const referedToken = useRoute().query.ref?.toString();
+  if (referedToken) {
+    form.append('refered_token', referedToken);
+  }
+
+  // referenceLimit.value.forEach(function (reference, index) {
+  //   form.append(`personal_references[${index}][name]`, reference.name);
+  //   form.append(`personal_references[${index}][phone]`, reference.phone);
+  // });
 
   await useFetch('auth/register',{
     method: 'POST',
