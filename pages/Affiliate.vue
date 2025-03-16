@@ -188,6 +188,17 @@ watch(confirmPassword, (newPass) => {
   }
 })
 
+if(useRoute().query.ref) {
+  const { data, pending } = useFetch('REF-l9vLW65AKb9yWx97', {
+    method: 'GET',
+    baseURL: config.public.API,
+    server: false,
+    onResponse({response}) {
+      console.log(response);
+    },
+  });
+}
+
 async function createAffiliate() {
   errorConfirmation.value = false;
   errorMessage.value = null;
