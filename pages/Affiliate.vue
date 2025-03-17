@@ -48,6 +48,10 @@
             <input type="text" v-model="lastName" placeholder="Apellido" id="lastName" class="form-control" />
           </div>
           <div class="form-group">
+            <label for="email">Correo:</label>
+            <input type="text" v-model="email" placeholder="Correo" id="email" class="form-control" />
+          </div>
+          <div class="form-group">
             <label for="address">Dirección:</label>
             <input type="text" v-model="address" placeholder="Dirección" id="address" class="form-control" />
           </div>
@@ -73,14 +77,14 @@
             <label for="country">País:</label>
             <input type="text" v-model="country" placeholder="País" id="country" class="form-control" />
           </div>
-        </div>
-        <div class="form-group">
-          <label for="city">Ciudad:</label>
-          <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
+          <div class="form-group">
+            <label for="city">Ciudad:</label>
+            <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
+          </div>
         </div>
         <div class="form-group">
           <label for="affiliate">Tipo de Afiliado:</label>
-          <select name="affiliate" id="affiliate" class="form-control">
+          <select name="affiliate" id="affiliate" class="form-control" v-model="affiliate">
             <option value="active">Afiliacion Activa</option>
             <option value="pasive">Afiliacion Pasiva</option>
           </select>
@@ -188,11 +192,10 @@ watch(confirmPassword, (newPass) => {
   }
 })
 
-if(useRoute().query.ref) {
-  const { data, pending } = useFetch('inviter/rfxZfPRFgGPTvhtbw6DmGRZ9ewmntBym', {
+if(useRoute().query.token) {
+  const { data, pending } = useFetch(`inviter/${useRoute().query.token}`, {
     method: 'GET',
     baseURL: config.public.API,
-    server: false,
     onResponse({response}) {
       console.log(response._data);
     },
@@ -208,8 +211,8 @@ async function createAffiliate() {
   form.append('name', name.value);
   form.append('lastname', lastName.value);
   form.append('email', email.value);
-  form.append('password', password.value);
-  form.append('password_confirmation', confirmPassword.value);
+  // form.append('password', password.value);
+  // form.append('password_confirmation', confirmPassword.value);
   form.append('office_number', officePhone.value);
   form.append('birthdate', birthdate.value);
   form.append('address', address.value);
@@ -219,7 +222,7 @@ async function createAffiliate() {
   form.append('city', city.value);
   form.append('suscription', affiliate.value);
 
-  const referedToken = useRoute().query.ref?.toString();
+  const referedToken = useRoute().query.token?.toString();
   if (referedToken) {
     form.append('token', referedToken);
   }
