@@ -33,8 +33,8 @@
         </div>
       </div> -->
       <!-- Personal information -->
-      <h1 v-if="useRoute().query.ref" class="text-black font-bold mb-7 text-2xl">
-        <span>Estas siendo invitado por:</span> <span class="text-primary">Juanito Pena</span>
+      <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl">
+        <span>Estas siendo invitado por:</span> <span class="text-primary">{{ inviter.name }}</span>
       </h1>
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
       <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1">
@@ -192,14 +192,21 @@ watch(confirmPassword, (newPass) => {
   }
 })
 
-if(useRoute().query.token) {
-  const { data, pending } = useFetch(`inviter/${useRoute().query.token}`, {
+const inviter = ref(null);
+function getInviter() {
+  $fetch(`inviter/${useRoute().query.token}`, {
     method: 'GET',
     baseURL: config.public.API,
     onResponse({response}) {
-      console.log(response._data);
+      if(response._data.code === 200) {
+        inviter.value = response._data.results;
+      }
     },
   });
+}
+
+if(useRoute().query.token) {
+  getInviter()
 }
 
 async function createAffiliate() {
