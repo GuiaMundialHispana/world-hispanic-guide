@@ -206,6 +206,7 @@ function getInviter() {
 }
 
 if(useRoute().query.token) {
+  console.log('token', useRoute().query.token)
   getInviter()
 }
 
