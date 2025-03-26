@@ -33,7 +33,8 @@
         </div>
       </div> -->
       <!-- Personal information -->
-      <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl">
+      <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl flex items-center">
+        <img v-if="inviter.user_image" :src="inviter.user_image" :alt="inviter.name" class="rounded-full w-12 h-12 mr-2" />
         <span>Estas siendo invitado por:</span> <span class="text-primary">{{ inviter.name }}</span>
       </h1>
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
