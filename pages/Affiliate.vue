@@ -7,31 +7,6 @@
   <!--  -->
   <div class="mt-8 mb-20">
     <div v-if="!successConfirmation" class="max-w-[960px] px-8 mx-auto">
-      <!-- User indivation -->
-      <!-- <h2 class="text-xl font-medium text-black mb-7">Datos del usuario:</h2>
-      <div class="grid sm:grid-cols-2 gap-4 grid-cols-1 mb-6 w-full">
-        <div class="flex flex-col xl:items-end items-start">
-          <div class="form-group">
-            <label for="user">Usuario:</label>
-            <input type="text" v-model="userName" placeholder="Usuario" id="user" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="email">Correo:</label>
-            <input type="text" v-model="email" placeholder="Correo" id="email" class="form-control" />
-          </div>
-        </div>
-        <div class="flex flex-col xl:items-end items-start">
-          <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input type="password" v-model="password" placeholder="Contraseña" id="password" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="repeatPassword">Repetir contraseña:</label>
-            <input type="password" v-model="confirmPassword" placeholder="Repetir contraseña" id="repeatPassword" class="form-control" />
-            <p v-if="errorPasswordConfirm" class="text-red-500 font-bold text-xs">La contraseña no es igual</p>
-          </div>
-        </div>
-      </div> -->
       <!-- Personal information -->
       <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl flex items-center">
         <img v-if="inviter.user_image" :src="inviter.user_image" :alt="inviter.name" class="rounded-full w-12 h-12 mr-2" />
@@ -83,47 +58,7 @@
             <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
           </div>
         </div>
-        <div class="form-group">
-          <label for="affiliate">Tipo de Afiliado:</label>
-          <select name="affiliate" id="affiliate" class="form-control" v-model="affiliate">
-            <option value="active">Afiliacion Activa</option>
-            <option value="pasive">Afiliacion Pasiva</option>
-          </select>
-        </div>
       </div>
-      <!-- Personal references -->
-      <!-- <h2 class="text-xl font-medium text-black mb-7">Referencias Personales:</h2>
-      <p class="text-sm font-normal text-opacity-[0.85]"><span class="text-primary">*</span> Referencias personales</p>
-      <div class="overflow-x-scroll md:overflow-hidden mt-2 w-full">
-        <table class="w-full mb-6 border-collapse m-0 p-0">
-          <tr class="border-b border-black border-opacity-[0.06] bg-[#FAFAFA]">
-            <th class="text-left w-1/3 whitespace-nowrap p-4 border-r border-black border-opacity-[0.06]">
-              <span class="text-primary">*</span> Referencias personales
-            </th>
-            <th class="text-left w-1/3 whitespace-nowrap p-4 border-r border-black border-opacity-[0.06]">
-              <span class="text-primary">*</span> Nombre completo
-            </th>
-            <th class="text-left w-1/3 whitespace-nowrap p-4">
-              <span class="text-primary">*</span> Teléfono
-            </th>
-          </tr>
-          <tr v-for="(tr,index) in referenceLimit" :key="index">
-            <td class="px-4 py-3">
-              Referencia {{ index + 1 }}
-            </td>
-            <td class="px-4 py-3">
-              <input type="text" v-model="tr.name" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60" placeholder="Pedro Perez">
-            </td>
-            <td class="px-4 py-3">
-              <VueTelInput id="officePhone" v-model="tr.phone" mode="international" class="border border-[#D9D9D9] text-sm rounded-sm px-3 md:w-full h-8 w-60"></VueTelInput>
-            </td>
-            <td v-if="index > 0" @click="referenceLimit.splice(index ,1)">eliminar</td>
-          </tr>
-        </table>
-      </div>
-      <button class="w-full h-8 border-dashed border border-[#D9D9D9] flex items-center justify-center font-normal text-black" @click="createRow()">
-        + Añadir
-      </button> -->
       <!--  -->
       <label for="confirm" class="flex items-center text-sm text-opacity-[0.85] mt-4">
         <input type="checkbox" name="Confirm" id="confirm" class="mr-2 w-4 h-4 text-primary" @click="confirm != confirm">
@@ -149,7 +84,7 @@
           <li class="text-white text-xl font-semibold mb-2 list-disc" v-for="error in errorMessage" :key="error">{{  error[0] }}</li>
         </ul>
       </div>
-      <button class="btn h-8 px-4 mx-auto mt-4" @click="createAffiliate()" :disabled="confirm">Aceptar y enviar solicitud</button>
+      <button class="btn h-8 px-4 mx-auto mt-4" v-if="!successConfirmation" @click="createAffiliate()" :disabled="confirm">Aceptar y enviar solicitud</button>
     </div>
   </div>
 </template>
@@ -220,8 +155,6 @@ async function createAffiliate() {
   form.append('name', name.value);
   form.append('lastname', lastName.value);
   form.append('email', email.value);
-  // form.append('password', password.value);
-  // form.append('password_confirmation', confirmPassword.value);
   form.append('office_number', officePhone.value);
   form.append('birthdate', birthdate.value);
   form.append('address', address.value);
@@ -229,17 +162,11 @@ async function createAffiliate() {
   form.append('personal_phone', personalPhone.value);
   form.append('country', country.value);
   form.append('city', city.value);
-  form.append('suscription', affiliate.value);
 
   const referedToken = useRoute().query.token?.toString();
   if (referedToken) {
     form.append('token', referedToken);
   }
-
-  // referenceLimit.value.forEach(function (reference, index) {
-  //   form.append(`personal_references[${index}][name]`, reference.name);
-  //   form.append(`personal_references[${index}][phone]`, reference.phone);
-  // });
 
   await useFetch('auth/register',{
     method: 'POST',
@@ -247,7 +174,22 @@ async function createAffiliate() {
     body: form,
     onResponse({response}) {
       loading.value = false;
-      if(response._data.code === 200) { successConfirmation.value = true; }
+      if(response._data.code === 200) { 
+        successConfirmation.value = true;
+        errorConfirmation.value = false;
+        errorMessage.value = null;
+        name.value = '';
+        lastName.value = '';
+        email.value = '';
+        address.value = '';
+        personalPhone.value = '';
+        officePhone.value = '';
+        birthdate.value = '';
+        socialId.value = '';
+        country.value = '';
+        city.value = '';
+
+      }
     },
     onResponseError({response}) {
       loading.value = false;
