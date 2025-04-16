@@ -30,5 +30,6 @@ export default defineNuxtConfig({
     public: {
       API: process.env.BASE_URL
     }
-  }
+  },
+  compatibilityDate: '2025-03-31'
 })
