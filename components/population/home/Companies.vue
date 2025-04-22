@@ -7,24 +7,24 @@
         </p>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 lg:justify-between gap-8 lg:px-20 px-4 mx-auto">
-        <a href="https://hispana-home-nuxt-eight.vercel.app/" target="_blank">
+        <a href="https://www.grupocasasymas.com/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-50 lg:w-60 mx-auto" src="/img/home/hispana-home.svg" alt="Hispana Home">
+            <img class="md:w-50 lg:w-60 mx-auto" src="/img/home/hispana-home.svg" alt="Grupo Casas y Más">
           </figure>
         </a>
-        <a href="https://hispana-negocios.vercel.app/" target="_blank">
+        <a href="https://www.gruponegociosymas.com/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-bussiness.svg" alt="Hispana Negocios">
+            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-bussiness.svg" alt="Grupo Negocios y Más">
           </figure>
         </a>
-        <a href="https://hispana-auto-nuxt.vercel.app/" target="_blank">
+        <a href="https://www.grupocarrosymas.com/" target="_blank">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-car.svg" alt="Hispana Auto">
+            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-car.svg" alt="Grupo Carros y Más">
           </figure>
         </a>
-        <NuxtLink to="https://hispana-admin-tc9h7.ondigitalocean.app/admin">
+        <NuxtLink to="https://www.guiamundialhispana.com/affiliate">
           <figure class="px-4">
-            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-afiliates.png" alt="Hispana Afiliados">
+            <img class="md:w-52 lg:w-60 mx-auto" src="/img/home/hispana-afiliates.png" alt="Guía Mundial Hispana">
           </figure>
         </NuxtLink>
       </div>
