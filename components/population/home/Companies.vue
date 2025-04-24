@@ -28,12 +28,23 @@
           </figure>
         </NuxtLink>
       </div>
+      <ul class="grid grid-cols-2 lg:grid-cols-4 lg:justify-between gap-8 lg:px-20 px-4 mt-10 mx-auto">
+        <li v-for="team in teams" :key="team">
+          <MoleculesTeamCard :name="team.name" :img="team.img" />
+        </li>
+      </ul>
+
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: 'HomeCompanies'
-}
+<script setup lang="ts">
+const config = useRuntimeConfig()
+const { data:teams } = useFetch('affiliates', {
+  method: 'GET',
+  baseURL: config.public.API,
+  transform(_data) {
+    return _data.results
+  }
+})
 </script>
