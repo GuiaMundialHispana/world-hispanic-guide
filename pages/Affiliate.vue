@@ -5,57 +5,72 @@
     <img src="/img/affiliate/join-team.png" alt="Join us" class="max-w-[700px] w-full mx-auto">
   </figure>
   <!--  -->
-  <div class="mt-8 mb-20">
+  <form @submit="onSubmit" class="mt-8 mb-20">
     <div v-if="!successConfirmation" class="max-w-[960px] px-8 mx-auto">
       <!-- Personal information -->
-      <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl flex items-center">
+      <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl flex gap-2 items-center">
         <img v-if="inviter.user_image" :src="inviter.user_image" :alt="inviter.name" class="rounded-full w-12 h-12 mr-2" />
-        <span>Estas siendo invitado por:</span> <span class="text-primary">{{ inviter.name }}</span>
+        <span>Estas siendo invitado por: </span> <span class="text-primary">{{ inviter.name }}</span>
       </h1>
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
       <div class="grid sm:grid-cols-2 gap-x-4 grid-cols-1">
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
-            <input type="text" v-model="name" placeholder="Nombre" id="name" class="form-control" />
+<!--            <input type="text" v-model="name" placeholder="Nombre" id="name" class="form-control" />-->
+            <Field class="form-control" name="name" type="text" placeholder="Nombre" id="name" />
+            <ErrorMessage class="error" name="name" />
           </div>
           <div class="form-group">
             <label for="lastName">Apellido:</label>
-            <input type="text" v-model="lastName" placeholder="Apellido" id="lastName" class="form-control" />
+            <Field class="form-control" name="lastName" type="text" placeholder="Apellido" id="lastName" />
+            <ErrorMessage class="error" name="lastName" />
           </div>
           <div class="form-group">
             <label for="email">Correo:</label>
-            <input type="text" v-model="email" placeholder="Correo" id="email" class="form-control" />
+            <Field class="form-control" name="email" type="email" placeholder="Correo" id="email" />
+            <ErrorMessage class="error" name="email" />
           </div>
           <div class="form-group">
             <label for="address">Dirección:</label>
-            <input type="text" v-model="address" placeholder="Dirección" id="address" class="form-control" />
+            <Field class="form-control" name="address" type="text" placeholder="Dirección" id="address" />
+            <ErrorMessage class="error" name="address" />
           </div>
           <div class="form-group">
             <label for="personalPhone">Teléfono personal:</label>
-            <VueTelInput id="personalPhone" v-model="personalPhone" mode="international" class="form-control w-full flex"></VueTelInput>
+            <Field class="form-control" name="personalPhone" type="text" id="personalPhone" v-slot="{ field }">
+              <VueTelInput id="personalPhone" v-bind="field" mode="international" class="form-control w-full flex"></VueTelInput>
+            </Field>
+            <ErrorMessage class="error" name="personalPhone" />
           </div>
         </div>
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="officePhone">Teléfono oficina:</label>
-            <VueTelInput id="officePhone" v-model="officePhone" mode="international" class="form-control w-full flex"></VueTelInput>
+            <Field Field class="form-control" name="officePhone" type="text" id="officePhone" v-slot="{ field }">
+              <VueTelInput id="officePhone" mode="international" v-bind="field" class="form-control w-full flex"></VueTelInput>
+            </Field>
+            <ErrorMessage class="error" name="officePhone" />
           </div>
           <div class="form-group">
             <label for="date">Fecha de nacimiento:</label>
-            <input type="date" v-model="birthdate" placeholder="Seleciona una fecha" id="date" class="form-control" />
+            <Field class="form-control" name="birthdate" type="date" id="date" placeholder="Seleciona una fecha" />
+            <ErrorMessage class="error" name="birthdate" />
           </div>
           <div class="form-group">
             <label for="userId">Cédula:</label>
-            <input type="text" v-model="socialId" placeholder="Cédula" id="userId" class="form-control" />
+            <Field class="form-control" name="socialId" type="text" id="userId" placeholder="Cédula" />
+            <ErrorMessage class="error" name="socialId" />
           </div>
           <div class="form-group">
             <label for="country">País:</label>
-            <input type="text" v-model="country" placeholder="País" id="country" class="form-control" />
+            <Field class="form-control" name="country" type="text" id="country" placeholder="País" />
+            <ErrorMessage class="error" name="country" />
           </div>
           <div class="form-group">
             <label for="city">Ciudad:</label>
-            <input type="text" v-model="city" placeholder="País" id="city" class="form-control" />
+            <Field class="form-control" name="city" type="text" id="city" placeholder="Ciudad" />
+            <ErrorMessage class="error" name="city" />
           </div>
         </div>
       </div>
@@ -80,57 +95,54 @@
           <img src="/img/warning.png" alt="Error" class="w-full">
         </figure>
         <p class="text-white text-xl font-semibold text-center">Ocurrió un Error, por favor verifica la información suministrada</p>
-        <ul>
-          <li class="text-white text-xl font-semibold mb-2 list-disc" v-for="error in errorMessage" :key="error">{{  error[0] }}</li>
+        <ul class="pl-2">
+          <li v-if="typeof errorMessage === 'object' && errorMessage !== null && !Array.isArray(errorMessage)"
+              v-for="error in errorMessage" :key="error" class="text-white text-xl font-semibold mb-2 list-disc"
+          >
+            {{ error[0] }}
+          </li>
+          <li v-else class="text-white text-xl font-semibold mb-2 list-disc">{{  errorMessage }}</li>
         </ul>
       </div>
-      <button class="btn h-8 px-4 mx-auto mt-4" v-if="!successConfirmation" @click="createAffiliate()" :disabled="confirm">Aceptar y enviar solicitud</button>
+      <button class="btn h-8 px-4 mx-auto mt-4" v-if="!successConfirmation" type="submit" :disabled="confirm">Aceptar y enviar solicitud</button>
     </div>
-  </div>
+  </form>
 </template>
 
 <script lang="ts" setup>
 import { VueTelInput } from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
+import { useForm } from "vee-validate";
+import * as yup from "yup";
+
+const schema = yup.object({
+  name: yup.string().required('El nombre es requerido'),
+  lastName: yup.string().required('El apellido es requerido'),
+  email: yup.string().email('Correo inválido').required('El correo es requerido'),
+  address: yup.string().required('La dirección es requerida'),
+  personalPhone: yup.string().required('El teléfono personal es requerido'),
+  officePhone: yup.string().required('El teléfono de oficina es requerido'),
+  birthdate: yup.date().required('La fecha de nacimiento es requerida'),
+  socialId: yup.string().required('La cédula es requerida'),
+  country: yup.string().required('El país es requerido'),
+  city: yup.string().required('La ciudad es requerida')
+});
+
+const { handleSubmit } = useForm({
+  validationSchema: schema,
+});
 
 const config = useRuntimeConfig();
-const userName = ref('');
-const email = ref('');
-const password = ref('');
-const confirmPassword = ref('');
-const name = ref('');
-const lastName = ref('');
-const address = ref('');
-const personalPhone = ref('');
-const officePhone = ref('');
-const birthdate = ref('');
-const socialId = ref('');
-const country = ref('');
-const city = ref('');
-const affiliate = ref('');
+
 const confirm = ref(false);
 const loading = ref(false);
-const errorPasswordConfirm = ref(false);
 const successConfirmation = ref(false);
 const errorConfirmation = ref(false);
 let errorMessage = ref(null)
-const referenceLimit = ref([{name:'', phone: ''}])
-
-function createRow() {
-  referenceLimit.value.push({name: '', phone: ''});
-}
-
-watch(confirmPassword, (newPass) => {
-  if(newPass !== password.value) {
-    errorPasswordConfirm.value = true;
-  } else {
-    errorPasswordConfirm.value = false;
-  }
-})
 
 const inviter = ref(null);
-function getInviter() {
-  $fetch(`inviter/${useRoute().query.token}`, {
+async function getInviter() {
+  await $fetch(`inviter/${useRoute().query.token}`, {
     method: 'GET',
     baseURL: config.public.API,
     onResponse({response}) {
@@ -142,39 +154,38 @@ function getInviter() {
 }
 
 if(useRoute().query.token) {
-  console.log('token', useRoute().query.token)
-  getInviter()
+  await getInviter()
 }
 
-async function createAffiliate() {
+const onSubmit = handleSubmit (async (values) => {
   errorConfirmation.value = false;
   errorMessage.value = null;
   successConfirmation.value = false;
   loading.value = true;
   const form = new FormData();
-  form.append('name', name.value);
-  form.append('lastname', lastName.value);
-  form.append('email', email.value);
-  form.append('office_number', officePhone.value);
-  form.append('birthdate', birthdate.value);
-  form.append('address', address.value);
-  form.append('social_id', socialId.value);
-  form.append('personal_phone', personalPhone.value);
-  form.append('country', country.value);
-  form.append('city', city.value);
+  form.append('name', values.name);
+  form.append('lastname', values.lastName);
+  form.append('email', values.email);
+  form.append('office_number', values.officePhone);
+  form.append('birthdate', values.birthdate);
+  form.append('address', values.address);
+  form.append('social_id', values.socialId);
+  form.append('personal_phone', values.personalPhone);
+  form.append('country', values.country);
+  form.append('city', values.city);
 
   const referedToken = useRoute().query.token?.toString();
   if (referedToken) {
     form.append('token', referedToken);
   }
 
-  await useFetch('auth/register',{
+  await useFetch('auth/register', {
     method: 'POST',
     baseURL: config.public.API,
     body: form,
     onResponse({response}) {
       loading.value = false;
-      if(response._data.code === 200) { 
+      if (response._data.code === 200) {
         successConfirmation.value = true;
         errorConfirmation.value = false;
         errorMessage.value = null;
@@ -193,13 +204,13 @@ async function createAffiliate() {
     },
     onResponseError({response}) {
       loading.value = false;
-      if(response._data.code === 400) {
+      if (response._data.code === 400) {
         errorConfirmation.value = true;
         errorMessage.value = response._data.message;
       }
     }
   });
-} 
+});
 
 </script>
 
@@ -219,5 +230,9 @@ label {
   & p{
     @apply text-white text-base sm:text-xl font-semibold text-center;
   }
+}
+
+.error {
+  @apply text-red-500 text-sm mt-2;
 }
 </style>

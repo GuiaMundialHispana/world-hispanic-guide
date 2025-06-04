@@ -15,7 +15,8 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-icons',
     '@nuxtjs/device',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@vee-validate/nuxt'
   ],
   dir: {
     middleware: 'maintenance'
