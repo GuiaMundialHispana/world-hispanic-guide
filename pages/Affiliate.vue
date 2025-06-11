@@ -9,7 +9,7 @@
     <div v-if="!successConfirmation" class="max-w-[960px] px-8 mx-auto">
       <!-- Personal information -->
       <h1 v-if="inviter" class="text-black font-bold mb-7 text-2xl flex gap-2 items-center">
-        <img v-if="inviter.user_image" :src="inviter.user_image" :alt="inviter.name" class="rounded-full w-12 h-12 mr-2" />
+        <NuxtImg :src="inviter.user_image" :alt="inviter.name" placeholder="/img/logo-header.png" class="rounded-full w-12 h-12 mr-2 object-contain" />
         <span>Estas siendo invitado por: </span> <span class="text-primary">{{ inviter.name }}</span>
       </h1>
       <h2 class="text-xl font-medium text-black mb-7">Información Personal:</h2>
@@ -17,7 +17,6 @@
         <div class="flex flex-col xl:items-end items-start">
           <div class="form-group">
             <label for="name">Nombre:</label>
-<!--            <input type="text" v-model="name" placeholder="Nombre" id="name" class="form-control" />-->
             <Field class="form-control" name="name" type="text" placeholder="Nombre" id="name" />
             <ErrorMessage class="error" name="name" />
           </div>
@@ -88,7 +87,7 @@
           <img src="/img/check.png" alt="Confirm success">
         </figure>
         <p>La información fue enviada con éxito</p>
-        <button class="btn h-8 px-4 mx-auto mt-4" @click="successConfirmation = false">Hacer una nueva aplicacion</button>
+        <button class="btn success h-8 px-4 mx-auto mt-4" @click="successConfirmation = false">Hacer una nueva aplicacion</button>
       </div>
       <div v-if="errorConfirmation" class="bg-primary confirmation-msg">
         <figure>
@@ -234,5 +233,9 @@ label {
 
 .error {
   @apply text-red-500 text-sm mt-2;
+}
+
+.btn.success {
+  @apply bg-blue-400 text-white;
 }
 </style>
