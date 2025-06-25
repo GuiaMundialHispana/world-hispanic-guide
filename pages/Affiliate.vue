@@ -78,7 +78,7 @@
         <input type="checkbox" name="Confirm" id="confirm" class="mr-2 w-4 h-4 text-primary" @click="confirm != confirm">
         Confirmar
       </label>
-      <p class="text-sm text-black text-opacity-[0.45] mb-6 mt-3">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
+      <p class="text-sm text-black text-opacity-[0.45] mb-6 mt-3">Confirmo que la información que estoy suministrando es verdadera y que he leído el Aviso Legal, la Política de <br /> Privacidad y que acepto los Términos y Condiciones <NuxtLink to="/terms-and-conditions" class="text-[#00DBF2]">aquí</NuxtLink> propuestos</p>
     </div>
     <!-- Confirmation -->
     <div class="px-4 sm:px-8">
