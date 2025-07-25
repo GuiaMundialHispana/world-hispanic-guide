@@ -33,7 +33,7 @@
       <h2 class="text-primary text-[28px] mb-7 font-medium text-center">Conozca nuestros afiliados</h2>
       <div class="flex items-center gap-4 justify-center">
         <button class="btn" @click="currentTab = 'active'" :class="{active: currentTab === 'active'}">Activos</button>
-        <button class="btn" @click="currentTab = 'inactive'" :class="{active: currentTab === 'inactive'}">Inactivos</button>
+        <button class="btn" @click="currentTab = 'inactive'" :class="{active: currentTab === 'inactive'}">Pasivos</button>
       </div>
       <ul v-if="currentTab === 'active'" class="mt-10 grid grid-cols-3">
         <li v-for="team in actives" :key="team" class="flex items-center gap-2 mb-6">
