@@ -2,6 +2,7 @@
   <section>
     <div class="container-fluid flex xl:flex-row flex-col justify-between items-center md:px-16 px-4 max-w-screen-2xl h-full relative z-10">
       <div class="xl:mb-0 mb-10">
+        <img src="/img/logo-header.png" alt="Guia mundial hispana" class="w-64 mb-8 md:ml-0 mx-auto object-contain" />
         <h1 class="lg:text-6xl lg:leading-[68px] text-3xl font-bold text-primary mb-2 xl:text-left text-center">Creando empleos <br /> <span class="text-secondary">sin limites</span></h1>
         <p class="mb-8 lg:text-2xl text-base text-secondary font-medium xl:text-left text-center">Más allá de cualquier frontera</p>
         <div class="flex items-center gap-x-4 xl:justify-start justify-center">
