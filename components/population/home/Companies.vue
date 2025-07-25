@@ -35,13 +35,13 @@
         <button class="btn" @click="currentTab = 'active'" :class="{active: currentTab === 'active'}">Activos</button>
         <button class="btn" @click="currentTab = 'inactive'" :class="{active: currentTab === 'inactive'}">Inactivos</button>
       </div>
-      <ul v-if="currentTab === 'active'" class="mt-10">
+      <ul v-if="currentTab === 'active'" class="mt-10 grid grid-cols-3">
         <li v-for="team in actives" :key="team" class="flex items-center gap-2 mb-6">
           <NuxtImg :src="`/img/team/${img}`" :alt="name" placeholder="/img/team/team-placeholder.jpg" class="w-14 h-14 object-cover object-center rounded-full" />
           <h4 class="font-medium text-black text-xl">{{ team.name }}</h4>
         </li>
       </ul>
-      <ul v-if="currentTab === 'inactive'"  class="mt-10 grid grid-cols-4">
+      <ul v-if="currentTab === 'inactive'"  class="mt-10 grid grid-cols-3">
         <li v-for="team in inactive" :key="team" class="flex items-center gap-2 mb-6">
           <NuxtImg :src="`/img/team/${img}`" :alt="name" placeholder="/img/team/team-placeholder.jpg" class="w-14 h-14 object-cover object-center rounded-full" />
           <h4 class="font-medium text-black text-xl">{{ team.name }}</h4>
