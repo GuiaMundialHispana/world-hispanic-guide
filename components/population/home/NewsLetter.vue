@@ -6,9 +6,9 @@
       <form>
         <div class="form-group flex md:flex-row flex-col justify-center">
           <input type="text" class="form-control md:w-72 w-full" placeholder="Correo electrónico">
-          <button class="btn w-[104px] h-9 md:m-0 mx-auto mt-4">
+          <button class="btn w-[116px] h-9 md:m-0 mx-auto mt-4">
             <AtomsIcon class="mr-2" name="send" :size=16></AtomsIcon>
-            Search
+            Suscribirse
           </button>
         </div>
       </form>
