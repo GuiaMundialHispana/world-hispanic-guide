@@ -3,7 +3,7 @@
     <h2 class="text-[28px] font-medium my-4 lg:my-10">Nuestras empresas</h2>
     <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-16 gap-6">
       <div class="company-card">
-        <a href="#">
+        <a href="https://www.grupocasasymas.com/" target="_blank">
           <figure>
             <img src="/img/home/hispana-home.svg" alt="Hispana Home">
           </figure>
@@ -11,7 +11,7 @@
         <p>El portal de propiedades más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su propiedad y poder llegar a más clientes potenciales en todo el mundo.</p>
       </div>
       <div class="company-card">
-        <a href="#">
+        <a href="https://www.gruponegociosymas.com/" target="_blank">
           <figure>
             <img src="/img/home/hispana-bussiness.svg" alt="Hispana Negocios">
           </figure>
@@ -19,7 +19,7 @@
         <p>El portal de Negocios más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su negocio y poder llegar a más clientes potenciales en todo el mundo.</p>
       </div>
       <div class="company-card">
-        <a href="#">
+        <a href="https://www.grupocarrosymas.com/" target="_blank">
           <figure>
             <img src="/img/home/hispana-car.svg" alt="Hispana Auto">
           </figure>
@@ -27,11 +27,11 @@
         <p>El portal de vehículos más completo y actualizado de Latinoamérica y Estados Unidos para que usted pueda mostrar toda la información sobre su vehículo y poder llegar a más clientes potenciales en todo el mundo.</p>
       </div>
       <div class="company-card">
-        <a href="#">
+        <NuxtLink to="https://www.guiamundialhispana.com/affiliate">
           <figure>
             <img src="/img/home/hispana-afiliates.png" alt="Hispana Afiliados">
           </figure>
-        </a>
+        </NuxtLink>
         <p>¡Únase a nuestro programa de afiliación y comience a ganar dinero por cada afiliación y venta que haga! Simplemente cree su cuenta y observe crecer el saldo de su cuenta a medida que sus invitados se convierten en sus afiliados y estos a su vez afilian o venden publicidad a sus clientes.</p>
       </div>
     </div>
